@@ -3,7 +3,8 @@
 
 ## SETUP:
 - Always use alts.
-### Tokens (Replace only if the code says "Wrong Tokens"):
+
+### Tokens (Replace only if the code says "Wrong Tokens"): [Error 401] [Error 420]
 1. Go to DevTools -> Network
 2. Join a party
 3. Find the request
@@ -11,7 +12,11 @@
 5. Copy Payload
 6. Paste it into the function gen_payload
 7. Replace your party code with the variable partyCode, e.g. {"partyCode":"1XD"} -> {"partyCode":partyCode}
-### Account Username (Variable: starterName):
+<details>
+  <summary>Show image</summary>
+  <img width="411" height="93" alt="image" src="https://github.com/user-attachments/assets/130f0de1-1192-46cb-88df-46eb7a22a248" />
+</details>
+### Account Username (Variable: starterName): 
 - It will not call an error, but it will mark all parties as parties with people
 <details>
   <summary>Show image</summary>
@@ -22,7 +27,7 @@
 2. Remember the username
 3. Replace "**Startername**" in code with the start of your name (no matter how many letters you are going to put in there, you can even put your whole name in it.)
 
-### Bloxd API URL:
+### Bloxd API URL: [Error 400]
 - Can change once in a while.
 - You can notice it if the code says "Not found party..." for a very long time
 1. Go to your request (See *Tokens*)
@@ -34,7 +39,7 @@
 </details>
 
 ### Modules (You may have them installed)
-#### Cause "module not found" error
+#### Cause "module not found" error [Error Not Found]
 - colorama (For coloring text)
 - requests (For making API requests)
 <details>
