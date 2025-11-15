@@ -1,4 +1,3 @@
-!pip3 install colorama
 from string import ascii_uppercase
 
 import colorama
@@ -11,12 +10,12 @@ from time import sleep as s
 # All the things, that can be changing are marked (And the errors with them)
 
 colorama.init()
-starterName="WiseNinja" # Your account name start
+starterName="WittyLion" # Your account name start
 letters=list(ascii_uppercase)+list(range(1,9))
 
-url = "https://social21.bloxd.io/social/join-party" # It can be social14 and, i think much more. Look in the fetch() headers in your browser, error 400
+url = "https://social7.bloxd.io/social/join-party" # It can be social14 and, i think much more. Look in the headers in your browser, error 400
 def gen_payload(partyCode: str):
-    return {"metricsCookies":{"3PAPISID":"N/A","1PAPISID":"N/A","3PSID":"N/A","1PSID":"N/A","3PSIDMC":"GR_g4EdCKNM-7CPVjMOytXIRP4i8SgPl9eDDRKapMmWuFJZDD6BoxWZGGucS7n_Sz4FmzQ2QJlnR68S3aovED0NjzRRmkF5Z4Quurp_IhKXaiVxk5GzdiU-3LPv5KCce23jTkB5xArG0Vhtg5gHm3Shw2wSKj7pAumDWND7AEv5HbAgZ8GExFLBcd6xvci-uhF03C9OnAqv5Cpv4JvpRAXeXXN2Uf-gxKOUggxwHcGRgXVXh0oFIWsRbcp","3PSIDMCPP":"ztJ9nmiMPMJ36O6FRM37314CiB3l3XUf8BJb.ztJUTB3l3yUDQXpO5Y2Gi89U4KkasmFwnY9Z8M373eV_Im96zfgy3rvM56Cqdyysd_8d3MwMie8FIQytTfsNie8yneFUTY9c3rUci18yABJUTYC-ie8OLfgBHfsyTh_-Tm8tHf4UnYaMPeT9nNsyABJXZfsrnKJX6Ys-im6MP17MTK8Unm4JTNRMPy2IjLwMie8FIQytTfshZfsrnKJX5QscZfTUINXMPeT9nNsyABJUHf5MPrhKsrRFPdiFPdk73e8aiB3lRdiYRO3wRSiCPBwMHf8X3rvMHeF-zm5kHYFUTQCc3MwMZfsO3rvMHeF-zm5kHfgU3MwMiK8M3rvMHeF-zm5kHYFUTQCc31c.oa7Hp6z8aQcTgQM8FVcSrgFoWQMnjYO-nLqKPKujWOOh4sDvsE5ymjBx6RJQIw1HUnwR8RHToD53c7y1jo-4ek","3PSIDMCSP":"0j0f03K6J009m11000000j0010s17wILM90p0q000R00tsw10B000J01bW71"},"contents":{"partyCode":partyCode}}
+    return {"metricsCookies":{"3PAPISID":"N/A","1PAPISID":"N/A","3PSID":"N/A","1PSID":"N/A","3PSIDMC":"GW_g4EdClrM-7nPd7MOyeXIRPaN8SgPl9RDDIoapqmyZFJbDD6LoxWuGCucS7n_Sz4CCzQ2Q9lnR63S3aovEDzNjGvRFkF5V4Quurp_vhK5ziNOksoz5iU-DLPv5KCc923jBpB5xArG0Vhtg5gHQ3Shw2wSKv7pAumXWND7AEv5HbAgZ8GExFLBcd6xPcu-udF0lS9inAdv5Cpv48vsRAXgkXNpsf-gxKOUggxwHcGRgXVSr0aqIWsC3cp","3PSIDMCPP":"ztJ9nmiMPMJ36O6FRM37314CiB3l3XUf8BJb.ztJUTB3l3yHKHey76KECTm2PncpOHQFOHfJ_dM373eV_Im96zfgy3rvM56Cqdyysd_8d3MwMie8FIQytTfsNie8yneFUTY9c3rUci18yABJUTYC-ie8OLfgBHfsyTh_-Tm8tHf4UnYaMPeT9nNsyABJXZfsrnKJX6Ys-im6MP17MTK8Unm4JTNRMPy2IjLwMie8FIQytTfshZfsrnKJX5QscZfTUINXMPeT9nNsyABJUHf5MPrhKsrRtRS3FRrh73e8aiB3lRdiYRO3wsditRLwMHf8X3rvMHeF-zm5kHYFUTQCc3MwMZfsO3rvMHeF-zm5kHfgU3MwMiK8M3rvMHeF-zm5kHYFUTQCc31c.F8l7k9vucif9k9dGXBvjTqB65nfGznIH7sm0zb4TpgDkG9JaPDZyZxoPGMLY8RlHYpd9Snm-dpDvUuUUMg5NPk","3PSIDMCSP":"0j0f03K6J009m11000000j0010s17wILM90p0q000R00tsw10B000J01bW71"},"contents":{"partyCode":partyCode}}
 
 
 headers = {
@@ -39,7 +38,7 @@ headers = {
 
 possible=[]
 try:
-    for i in range(500):
+    for i in range(100):
         l=random.choice(letters)
         l2=random.choice(letters)
         l3=random.choice(letters)
@@ -64,13 +63,9 @@ try:
             quit()
         else:
             print(response)
-        s(0.5)
+        s(1)
 
 except KeyboardInterrupt:
     print(Fore.LIGHTYELLOW_EX+"STOPPED")
 with open("ALLOWED.txt", "a") as f:
     f.write("\n".join(possible))
-
-# It goes through random parties from 000 to ZZZ
-# And tells me the results
-# wanna see the whole code?
